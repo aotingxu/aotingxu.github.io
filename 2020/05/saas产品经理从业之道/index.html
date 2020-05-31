@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <title>
+        SaaS产品经理从业之道 - 你好，敖廷旭
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="SaaS产品系统设计方法论" />
+    <meta name="generator" content="Hugo 0.57.2 with theme pure" />
+    <title>SaaS产品经理从业之道 - 你好，敖廷旭</title>
+    
+    
+    <link rel="stylesheet" href="https://aotingxu.github.io/css/style.min.96344896368df9cb930b382c93ca5a7234d7118b7754e394f15c1e929cc37e10.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="SaaS产品经理从业之道" />
+<meta property="og:description" content="SaaS产品系统设计方法论" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aotingxu.github.io/2020/05/saas%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E4%BB%8E%E4%B8%9A%E4%B9%8B%E9%81%93/" />
+<meta property="article:published_time" content="2020-05-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-30T00:00:00+00:00" />
+<meta itemprop="name" content="SaaS产品经理从业之道">
+<meta itemprop="description" content="SaaS产品系统设计方法论">
+
+
+<meta itemprop="datePublished" content="2020-05-30T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-05-30T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="809">
+
+
+
+<meta itemprop="keywords" content="产品管理," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SaaS产品经理从业之道"/>
+<meta name="twitter:description" content="SaaS产品系统设计方法论"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  
+  
+
+  <body class="main-center theme-white" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://github.com/aotingxu" target="_blank">
+            <img class="img-circle img-rotate" src="https://aotingxu.github.io/favicon.ico" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">敖廷旭</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">菜鸟慢慢成长</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>中国, 上海</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="想要查找什么..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">主页</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/posts/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">归档</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">分类</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">标签</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/about/">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">关于</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content"><p>Aurora,let's go!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> 分类</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://aotingxu.github.io/categories/%E4%BA%A7%E5%93%81%E7%AE%A1%E7%90%86/" class="category-list-link">产品管理</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://aotingxu.github.io/categories/%E6%95%99%E7%A8%8B%E6%80%BB%E7%BB%93/" class="category-list-link">教程总结</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://aotingxu.github.io/categories/%E7%B3%BB%E7%BB%9F%E8%AF%B4%E6%98%8E/" class="category-list-link">系统说明</a><span class="category-list-count">2</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> 标签</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://aotingxu.github.io/tags/%E4%BA%A7%E5%93%81%E7%AE%A1%E7%90%86/" class="tag-list-link">产品管理</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://aotingxu.github.io/tags/%E6%95%99%E7%A8%8B%E6%80%BB%E7%BB%93/" class="tag-list-link">教程总结</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://aotingxu.github.io/tags/%E6%96%87%E6%A1%A3%E8%AF%B4%E6%98%8E/" class="tag-list-link">文档说明</a><span
+                    class="tag-list-count">2</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://aotingxu.github.io/2020/05/saas%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E4%BB%8E%E4%B8%9A%E4%B9%8B%E9%81%93/" class="title">SaaS产品经理从业之道</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-05-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-05-30</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://aotingxu.github.io/2020/05/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B5%81%E7%A8%8B/" class="title">个人博客搭建指南</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-05-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-05-30</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://aotingxu.github.io/2019/03/markdown-syntax/" class="title">Markdown Syntax Guide</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2019-03-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-03-11</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://aotingxu.github.io/2019/03/math-typesetting/" class="title">Math Typesetting</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2019-03-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-03-08</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://aotingxu.github.io/2019/03/emoji-support/" class="title">Emoji Support</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2019-03-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-03-05</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">文章目录</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2020/05/saas%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E4%BB%8E%E4%B8%9A%E4%B9%8B%E9%81%93/"
+    >SaaS产品经理从业之道</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://aotingxu.github.io/2020/05/saas%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E4%BB%8E%E4%B8%9A%E4%B9%8B%E9%81%93/" class="article-date">
+  <time datetime="2020-05-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-05-30</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/%E4%BA%A7%E5%93%81%E7%AE%A1%E7%90%86/"> 产品管理 </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/%E4%BA%A7%E5%93%81%E7%AE%A1%E7%90%86/"> 产品管理 </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/05/saas%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E4%BB%8E%E4%B8%9A%E4%B9%8B%E9%81%93/#comments"
+            class="article-comment-link">评论</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 809字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2分 </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      
+
+<h1 id="背景">背景</h1>
+
+<p>互联网进入到下半场，消费互联网萎缩，产业互联网兴起，企业服务话题逐渐变火，目前越来越多的在C端有过1-2年产品经验的产品经理想要入行或者正在真正开始从事SaaS产品的工作过程中。由于C端产品相对B端容易理解，很多刚入门的产品经理包括我，经常会以C端思维来思考B端SaaS产品，导致做SaaS产品过程中时常会遇到某些瓶颈问题，后来发现自己的思维模式及方法就有些不对，应该转变全局概念。比如当我们思考自身SaaS产品如何满足一块新的业务时，往往会发现过程中与C端产品有以下不同。</p>
+
+<p><img src="http://47.101.145.99/wp-content/uploads/2020/02/BC.png" alt="" /></p>
+
+<p><strong>通过分析SaaS产品经理的从业之道，围绕以下几个方面进行思考——如何成为一名有深度会思考的PO。</strong></p>
+
+<h2 id="1-解决-理解业务难-的问题">1 解决“理解业务难”的问题**</h2>
+
+<p>做SaaS产品，往往面临的是一个环状业务，通过学习了相关的课程，从宏观和微观角度总结出向产品经理应该如何理解业务</p>
+
+<h2 id="2-解决-需求不好梳理-的问题">2 解决“需求不好梳理”的问题**</h2>
+
+<p>做SaaS产品，往往面临的整个业务链条需要权衡，通过学习了相关的课程，从场景和价值角度总结出如何更好梳理业务链条的业务场景及需求，并通过价值对需求进行评价</p>
+
+<h2 id="3-解决-功能设计复杂-的问题">3 解决“功能设计复杂”的问题**</h2>
+
+<p>做SaaS产品，往往会面临大量个性化需求，以“后端标准化，前端个性化”的角度出发，理解并总结架构，以及如何进行可配置来解决做SaaS产品的终极问题。</p>
+
+<h1 id="总结">总结</h1>
+
+<p>根据如下体系框架个人进行了脑图的归纳总结：</p>
+
+<h2 id="第一章-深刻理解saas业务">第一章  深刻理解SaaS业务</h2>
+
+<ol>
+<li>SaaS产品经理如何快速了解一个行业？</li>
+<li>SaaS产品经理如何进行业务调研？</li>
+</ol>
+
+<h2 id="第二章-定义saas产品的场景与价值">第二章 定义SaaS产品的场景与价值</h2>
+
+<ol>
+<li>7要素描述产品场景</li>
+<li>如何通过场景需求清单梳理场景</li>
+<li>价值主张与需求对应的价值</li>
+<li>如何基于价值进行需求的判断</li>
+</ol>
+
+<h2 id="第三章-saas产品设计-架构与功能">第三章 SaaS产品设计—架构与功能</h2>
+
+<ol>
+<li>商业活动和管理活动通用的架构</li>
+<li>如何梳理复合业务的架构</li>
+<li>如何基于架构设计功能，满足个性化的需求</li>
+</ol>
+
+<p>如今我会经常复盘当时学习此课程后整理出来的脑图，在一定程度上确实帮助我厘清了系统化的思考框架，受益匪浅，希望自己多思考多总结能持续检查下去！</p>
+
+<p><img src="../../static/image/SaaS产品经理总结.png" alt="" /></p>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接: </strong>
+      <a href="https://aotingxu.github.io/2020/05/saas%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E4%BB%8E%E4%B8%9A%E4%B9%8B%E9%81%93/" title="SaaS产品经理从业之道" target="_blank" rel="external">https://aotingxu.github.io/2020/05/saas%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E4%BB%8E%E4%B8%9A%E4%B9%8B%E9%81%93/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/aotingxu" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://aotingxu.github.io/favicon.ico" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/aotingxu" target="_blank"><span class="text-dark">敖廷旭</span><small class="ml-1x">菜鸟慢慢成长</small></a></h3>
+        <div>心有猛虎，细嗅蔷薇</div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+<section id="comments">
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://aotingxu.github.io/2020/05/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B5%81%E7%A8%8B/" title="个人博客搭建指南"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="文章目录" role="button">
+                    <span>[&nbsp;</span><span>文章目录</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        
+        <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal"
+            data-target="#donateModal"><span>赏</span></button>
+        
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+
+
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content donate">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+                <div class="donate-box">
+                    <div class="donate-head">
+                        <p>感谢您的支持,我会继续努力的!</p>
+                    </div>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+                            <div class="donate-payimg">
+                                <img src="https://aotingxu.github.io/donate/alipay.jpg"
+                                    alt="扫码支持" title="扫一扫" />
+                            </div>
+                            <p class="text-muted mv">扫码打赏, 多少你说了算~</p>
+                            <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦~</p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+                            <div class="donate-payimg">
+                                <img src="https://aotingxu.github.io/donate/wechat.jpg"
+                                    alt="扫码支持" title="扫一扫" />
+                            </div>
+                            <p class="text-muted mv">扫码打赏, 多少你说了算~</p>
+                            <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+                        </div>
+                    </div>
+                    <div class="donate-footer">
+                        <ul class="nav nav-tabs nav-justified" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay"
+                                    aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+                            </li>
+                            <li role="presentation" class="">
+                                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab"
+                                    aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i>
+                                    微信支付</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://www.facebook.com/100037008668968" target="_blank" title="facebook" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-facebook"></i></a></li>
+    <li><a href="https://github.com/aotingxu" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://aotingxu.github.io/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+    <li><a href="https://twitter.com/Aotin626x" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-twitter"></i></a></li>
+    <li><a href="https://www.weibo.com/atx0626" target="_blank" title="weibo" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-weibo"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2019  -
+    2020
+    <div class="publishby">
+      copyright © <a href="https://github.com/aotingxu" target="_blank"> aotingxu </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://aotingxu.github.io/js/application.min.bdeb64b910570b6c41badc6a05b7afb0c8ad9efd8525de3c7257d59e786326a3.js"></script>
+<script src="https://aotingxu.github.io/js/plugin.min.51ff8c7317566f82259170fa36e09c4493adc9b9378b427a01ad3f017ebac7dd.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(未命名)',
+            },
+            ROOT_URL: 'https:\/\/aotingxu.github.io\/',
+            CONTENT_URL: 'https:\/\/aotingxu.github.io\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://aotingxu.github.io/js/insight.min.a343cd9a5a7698336b28ef3a7c16a3a1b1d2d5fb17dc8ed04022bbe08cc5459073a15bdafa3a8a58cdd56080784bdd69fa70b1ae8597565c799c57ed00f0e120.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '7932ad4755e175ddc87a',
+        clientSecret: '082f3c7aced7f778e76035458d38e5abb81c4d43',
+        repo: 'aotingxu.github.io',
+        owner: 'aotingxu',
+        admin: ['aotingxu'],
+        id: md5(location.pathname),
+        distractionFreeMode: true
+    });
+    gitalk.render('comments');
+</script>
+
+  </body>
+</html>
