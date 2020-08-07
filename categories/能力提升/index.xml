@@ -5,10 +5,19 @@
     <link>https://aotingxu.github.io/categories/%E8%83%BD%E5%8A%9B%E6%8F%90%E5%8D%87/</link>
     <description>Recent content in 能力提升 on 你好，敖廷旭</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 23 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://aotingxu.github.io/categories/%E8%83%BD%E5%8A%9B%E6%8F%90%E5%8D%87/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>个人读书知识清单——持续阅读</title>
+      <link>https://aotingxu.github.io/2020/07/%E4%B8%AA%E4%BA%BA%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86-%E6%8C%81%E7%BB%AD%E9%98%85%E8%AF%BB/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://aotingxu.github.io/2020/07/%E4%B8%AA%E4%BA%BA%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86-%E6%8C%81%E7%BB%AD%E9%98%85%E8%AF%BB/</guid>
+      <description>个人知识管理 个人知识管理 (PKM，Personal Knowledge Management) 是将个人拥有的各种资料、随手可得的信息变成更具价值的知识，最终利于自己的工作、生活。 通</description>
+    </item>
     
     <item>
       <title>敏捷用户故事拆分方法</title>
@@ -110,24 +119,6 @@
     </item>
     
     <item>
-      <title>Markdown Syntax Guide</title>
-      <link>https://aotingxu.github.io/2019/03/markdown-syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://aotingxu.github.io/2019/03/markdown-syntax/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Math Typesetting</title>
-      <link>https://aotingxu.github.io/2019/03/math-typesetting/</link>
-      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://aotingxu.github.io/2019/03/math-typesetting/</guid>
-      <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Emoji Support</title>
       <link>https://aotingxu.github.io/2019/03/emoji-support/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
@@ -179,6 +170,24 @@
       
       <guid>https://aotingxu.github.io/2019/01/%E6%95%8F%E6%8D%B7%E7%9B%B8%E5%85%B3%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90/</guid>
       <description>具体对禅道、TAPD、Jira、华为软件云、ONES Project 平台进行分析整个逻辑操作流程、功能结构、页面布局等，并与猪齿鱼现有的内容进行整理对比。</description>
+    </item>
+    
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>https://aotingxu.github.io/2019/01/markdown-syntax/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://aotingxu.github.io/2019/01/markdown-syntax/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Math Typesetting</title>
+      <link>https://aotingxu.github.io/2019/01/math-typesetting/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://aotingxu.github.io/2019/01/math-typesetting/</guid>
+      <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
     </item>
     
   </channel>
